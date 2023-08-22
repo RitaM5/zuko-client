@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-container{
+    @apply  mx-auto container px-12
+  }
+  .thumbs-wrapper{
+    @apply flex justify-center
+  }
+  .slider li img{
+    @apply h-[750px]
+  }
