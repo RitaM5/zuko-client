@@ -4,30 +4,39 @@ import Logo from "../../../assets/Logo.png";
 import Button from "../Button";
 import NavLinks from "./NavLinks";
 import { AuthContext } from "../../../providers/AuthProvider";
+import useAdmin from "../../../hooks/useAdmin";
+import usePhotographer from "../../../hooks/usePhotographer";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [isAdmin] = useAdmin();
+  const [isPhotographer] = usePhotographer();
   const [open, setOpen] = useState(false);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.log(error));
+  }
   return (
     <div className="fixed z-10 w-full bg-white">
-    <div className="my-4 h-full ">
-    <img src={Logo} alt="logo" className="md:cursor-pointer mx-auto h-9  block lg:hidden" />
-    </div>
+      <div className="my-4 h-full ">
+        <img src={Logo} alt="logo" className="md:cursor-pointer mx-auto h-9  block lg:hidden" />
+      </div>
       <nav className="bg-white ">
         <div className="flex font-poppins items-center font-medium justify-around h-20 ">
           <div className="z-50 p-5 md:w-auto w-full flex justify-between">
             <img src={Logo} alt="logo" className="md:cursor-pointer h-9 lg:block hidden" />
             {
-              user ? <p className='tooltip ' data-tip={user.displayName} >
+              user ? <div className="inline-flex items-center gap-2"> <p className='tooltip ' data-tip={user.displayName} >
                 <img className='w-10 h-10 rounded-full  block lg:hidden' src={user.photoURL
                 } alt='user image' ></img>
-              </p> : <img src="
+              </p> <button onClick={handleLogOut} className="btn btn-ghost block lg:hidden font-poppins text-[15px]">LogOut</button></div> : <img src="
              https://i.ibb.co/0QZCv5C/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png" className="h-9 block md:block lg:hidden" alt="" srcset="" />
             }
             <div className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
               <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
             </div>
           </div>
-          <ul className="md:flex hidden uppercase items-center gap-8 font-semibold ">
+          <ul className="md:flex hidden uppercase items-center gap-8 lg:gap-2 font-semibold ">
             <li>
               <Link to="/" className="py-7 px-3 inline-block">
                 Home
@@ -44,6 +53,13 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
+            {
+              user && <>
+                {isAdmin ? <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
+                  isPhotographer ? <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
+                    <li><Link to="/dashboard/userhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              </>
+            }
             <li>
               <Link to="/contact" className="py-7 px-3 inline-block">
                 Contact
@@ -57,10 +73,10 @@ const Navbar = () => {
           </ul>
           <div className="md:block hidden">
             {
-              user ? <p className='tooltip ' data-tip={user.displayName} >
+              user ? <div className="inline-flex gap-3 items-center"> <p className='tooltip ' data-tip={user.displayName} >
                 <img className='w-10 h-10 rounded-full  hidden lg:block' src={user.photoURL
                 } alt='user image' ></img>
-              </p> : <img src="
+              </p> <button onClick={handleLogOut} className="btn btn-ghost   hidden lg:block font-poppins text-[15px]">LogOut</button></div> : <img src="
              https://i.ibb.co/0QZCv5C/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black.png" className="h-9" alt="" srcset="" />
             }
           </div>
@@ -88,6 +104,13 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
+            {
+              user && <>
+                {isAdmin ? <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
+                  isPhotographer ? <li><Link to="/dashboard/instructorhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
+                    <li><Link to="/dashboard/userhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              </>
+            }
             <div className="py-3">
               <li>
                 <Link to="/contact" className="py-3 px-3 inline-block">

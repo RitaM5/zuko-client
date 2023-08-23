@@ -7,7 +7,7 @@ import useAuth from './useAuth';
 import { config } from 'localforage';
 
 const axiosSecure = axios.create({
-  baseURL: 'https://summer-camp-server-dusky.vercel.app', 
+  baseURL: 'https://zuko-server.vercel.app/', 
 });
 const useAxiosSecure = () => {
   const { logOut } = useAuth(); 
