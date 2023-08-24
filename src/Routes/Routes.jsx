@@ -6,10 +6,18 @@ import Home from "../pages/Home/Home/Home";
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
-// import Dashboard from "../Layout/Dashboard";
-// import UserHome from "../pages/Dashboard/UserHome/UserHome";
-
-// import PrivateRoute from "../Routes/PrivateRoute"
+import About from "../pages/Home/About/About";
+import Gallery from "../pages/Home/Gallery/Gallery";
+import Contact from "../pages/Home/Contact/Contact";
+import PhotographerRoute from "./PhotographerRoute";
+import PhotographerHome from "../pages/Dashboard/PhotographerHome/PhotographerHome";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import AdminRoute from "./AdminRoute";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../Layout/Dashboard";
+import AddPhoto from "../pages/Dashboard/PhotographerHome/AddPhoto";
+import MyGallery from "../pages/Dashboard/PhotographerHome/MyGallery";
 
 export const router = createBrowserRouter([
     {
@@ -30,16 +38,28 @@ export const router = createBrowserRouter([
                 path: 'signup',
                 element: <SignUp></SignUp>
             },
+            {
+                path: 'about',
+                element: <About></About>
+            },
+            {
+                path: 'gallery',
+                element: <Gallery></Gallery>
+            },
+            {
+                path: 'contact',
+                element: <Contact></Contact>
+            },
         ]
     },
-    // {
-    //     path: "dashboard",
-    //     element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
-    //     children: [
-    //         {
-    //             path: 'userhome',
-    //             element: <UserHome></UserHome>
-    //         },
+    {
+        path: "dashboard",
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'userhome',
+                element: <UserHome></UserHome>
+            },
             // {
             //     path: 'myselectedclasses',
             //     element: <MySelectedClass></MySelectedClass>
@@ -56,11 +76,11 @@ export const router = createBrowserRouter([
             //     path: 'paymenthistory',
             //     element: <PaymentHistory></PaymentHistory>
             // },
-            // //admin routes
-            // {
-            //     path: 'adminhome',
-            //     element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
-            // },
+            //admin routes
+            {
+                path: 'adminhome',
+                element: <AdminHome></AdminHome>
+            },
             // {
             //     path: 'manageusers',
             //     element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
@@ -69,20 +89,20 @@ export const router = createBrowserRouter([
             //     path: 'manageclasses',
             //     element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
             // },
-            // //instructor
-            // {
-            //     path: 'instructorhome',
-            //     element: <InstructorRoute><InstructorHome></InstructorHome></InstructorRoute>
-            // },
+            //instructor
+            {
+                path: 'photographerhome',
+                element: <PhotographerHome></PhotographerHome>
+            },
 
-            // {
-            //     path: 'addclasses',
-            //     element: <InstructorRoute><AddClasses></AddClasses></InstructorRoute>
-            // },
-            // {
-            //     path: 'myclasses',
-            //     element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
-            // },
-    //     ]
-    // }
+            {
+                path: 'addphoto',
+                element:<AddPhoto></AddPhoto>
+            },
+            {
+                path: 'mygallery',
+                element: <MyGallery></MyGallery>
+            },
+        ]
+    }
 ]);

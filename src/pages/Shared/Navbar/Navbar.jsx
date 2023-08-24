@@ -107,7 +107,7 @@ const Navbar = () => {
             {
               user && <>
                 {isAdmin ? <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
-                  isPhotographer ? <li><Link to="/dashboard/instructorhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
+                  isPhotographer ? <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
                     <li><Link to="/dashboard/userhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
               </>
             }
