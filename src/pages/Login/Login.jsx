@@ -46,19 +46,18 @@ const Login = () => {
             </Helmet> 
             {/*          */}
             <div className="hero min-h-screen bg-base-200 my-container">
-                <div className="hero-content gap-6  mx-auto my-28 grid grid-cols-1 md:grid-cols-2">
-                    <div className="text-center md:order-2 lg:text-left w-full mt-14 ">
-                        <img className='rounded-3xl h-[500px]' src="https://media.tenor.com/p0G_bmA2vSYAAAAd/login.gif" alt="" srcset="" />
-                    </div>
+                <div className="hero-content  mx-auto my-44 grid grid-cols-1 ">
                     <div className='card w-full md:order-1'>
-                        <h1 className="text-3xl font-bold text-pink-500 font-poppins mb-3">Login now!</h1>
-                        <div className="shadow-2xl bg-base-100 rounded-3xl h-[500px]">
+
+                        <div className="shadow-2xl bg-base-100 md:w-[450px] rounded-3xl">
+                        <img className='h-20 rounded-full mx-auto relative bottom-8' src="https://artistryhubproject.web.app/assets/lock-ce5fa0e7.png" alt="" srcset="" />
+                        <h1 className='text-center text-2xl text-teal-800 font-semibold'>Login Now</h1>
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                                 <div className="form-control font-poppins">
                                     <label className="label">
                                         <span className="label-text text-lg">Email</span>
                                     </label>
-                                    <input type="email"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
+                                    <input type="email"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered rounded-full" />
                                     {errors.email && <span className="text-red-600">Email is required</span>}
                                 </div>
                                 <div className="form-control font-poppins relative">
@@ -67,7 +66,7 @@ const Login = () => {
                                     </label>
                                     <input type={show ? "text" : "password"}  {...register("password", {
                                         required: true,
-                                    })} placeholder="password" className="input input-bordered" />
+                                    })} placeholder="password" className="input input-bordered rounded-full" />
                                     <p className=' absolute right-0 mt-14 mr-3 text-lg' onClick={() => setShow(!show)}>
                                         <FaRegEye />
                                     </p>
@@ -75,7 +74,7 @@ const Login = () => {
                                     <p className="text-red-600">{error.message}</p>
                                 </div>
                                 <div className="form-control mt-3 font-poppins">
-                                    <input className="btn bg-pink-500 text-white" type="submit" value="Login" />
+                                    <input className="btn bg-teal-800 text-white rounded-full" type="submit" value="Login" />
                                 </div>
                                 <p className='font-poppins'><small className=''>Don't have an account ? <Link to="/signup">Signup</Link></small></p>
                             </form>

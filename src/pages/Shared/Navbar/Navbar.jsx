@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/Logo.png";
-import Button from "../Button";
 import NavLinks from "./NavLinks";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useAdmin from "../../../hooks/useAdmin";
@@ -19,12 +17,12 @@ const Navbar = () => {
   return (
     <div className="fixed z-10 w-full bg-white">
       <div className="my-4 h-full ">
-        <img src={Logo} alt="logo" className="md:cursor-pointer mx-auto h-9  block lg:hidden" />
+        <h1 className="text-5xl text-center font-bangers block lg:hidden text-teal-800">ZUKO</h1>
       </div>
       <nav className="bg-white ">
         <div className="flex font-poppins items-center font-medium justify-around h-20 ">
           <div className="z-50 p-5 md:w-auto w-full flex justify-between">
-            <img src={Logo} alt="logo" className="md:cursor-pointer h-9 lg:block hidden" />
+            <h1 className=" lg:block hidden text-5xl font-bangers text-teal-800">ZUKO</h1>
             {
               user ? <div className="inline-flex items-center gap-2"> <p className='tooltip ' data-tip={user.displayName} >
                 <img className='w-10 h-10 rounded-full  block lg:hidden' src={user.photoURL
@@ -53,13 +51,19 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
-            {
+            {/* {
               user && <>
                 {isAdmin ? <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
                   isPhotographer ? <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
-                    <li><Link to="/dashboard/userhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+                    <li><Link to="/dashboard/userhome" className="py-3 px-3 inline-block">Dashboard</Link></li>
+                }
               </>
-            }
+            } */}
+            {user && <>
+              {isAdmin && <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              {isPhotographer && <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+
+            </>}
             <li>
               <Link to="/contact" className="py-7 px-3 inline-block">
                 Contact
@@ -84,7 +88,7 @@ const Navbar = () => {
           {/* Mobile nav */}
           <ul
             className={`
-        md:hidden bg-neutral-200 fixed w-full h-[400px] z-10 py-12 top-36 overflow-y-auto bottom-0  pl-4
+        md:hidden bg-teal-800 text-white fixed w-full h-[400px] z-10 py-12 top-36 overflow-y-auto bottom-0  pl-4
         duration-500 ${open ? "left-0" : "left-[-100%] font-semibold text-lg "}
         `}
           >
@@ -104,13 +108,18 @@ const Navbar = () => {
                 Gallery
               </Link>
             </li>
-            {
+            {/* {
               user && <>
                 {isAdmin ? <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
                   isPhotographer ? <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li> :
                     <li><Link to="/dashboard/userhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
               </>
-            }
+            } */}
+            {user && <>
+              {isAdmin && <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              {isPhotographer && <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+
+            </>}
             <div className="py-3">
               <li>
                 <Link to="/contact" className="py-3 px-3 inline-block">

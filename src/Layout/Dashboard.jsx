@@ -13,7 +13,7 @@ const Dashboard = () => {
     const { user } = useAuth();
     const [isAdmin] = useAdmin();
     const [isPhotographer] = usePhotographer();
- 
+
     return (
         <div>
             <Helmet>
@@ -25,6 +25,7 @@ const Dashboard = () => {
                 <div className='w-full lg:w-1/4'>
                     {
                         isAdmin ? <AdminSidebar></AdminSidebar>
+
                         : isPhotographer ? <PhotographerSidebar></PhotographerSidebar>
                         : <Sidebar></Sidebar>
                     }

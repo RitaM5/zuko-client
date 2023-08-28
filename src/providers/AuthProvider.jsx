@@ -46,12 +46,12 @@ const AuthProvider = ({ children }) => {
 
             // get and set token
             if (currentUser) {
-                // axios.post('https://summer-camp-server-dusky.vercel.app/jwt', { email: currentUser.email })
-                //     .then(data => {
-                //         // console.log(data.data.token)
-                //         localStorage.setItem('access-token', data.data.token)
-                //         setLoading(false);
-                //     })
+                axios.post('https://zuko-server.vercel.app/jwt', { email: currentUser.email })
+                    .then(data => {
+                        // console.log(data.data.token)
+                        localStorage.setItem('access-token', data.data.token)
+                        setLoading(false);
+                    })
                 console.log(currentUser);
             }
             else {

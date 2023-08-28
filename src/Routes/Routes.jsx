@@ -18,6 +18,7 @@ import PrivateRoute from "./PrivateRoute";
 import Dashboard from "../Layout/Dashboard";
 import AddPhoto from "../pages/Dashboard/PhotographerHome/AddPhoto";
 import MyGallery from "../pages/Dashboard/PhotographerHome/MyGallery";
+import ManageUsers from "../pages/Dashboard/AdminHome/ManageUsers";
 
 export const router = createBrowserRouter([
     {
@@ -81,10 +82,10 @@ export const router = createBrowserRouter([
                 path: 'adminhome',
                 element: <AdminHome></AdminHome>
             },
-            // {
-            //     path: 'manageusers',
-            //     element: <AdminRoute><ManageUsers></ManageUsers></AdminRoute>
-            // },
+            {
+                path: 'manageusers',
+                element: <ManageUsers></ManageUsers>
+            },
             // {
             //     path: 'manageclasses',
             //     element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>

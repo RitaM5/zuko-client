@@ -16,6 +16,7 @@ const Banner = () => {
         autoPlay={true} 
         interval={3000} 
         stopOnHover={true}
+        className=''
          preventMovementUntilSwipeScrollTolerance={true} and swipeScrollTolerance={50}>
             <div>
                 <img src={img1}/>
@@ -24,11 +25,10 @@ const Banner = () => {
                         <div data-aos="fade-right"
                             data-aos-offset="300"
                             data-aos-easing="ease-in-sine" data-aos-duration="1000" className=' text-white ml-2 space-y-5 w-full p-4 '>
+                                <h1 className='text-2xl'>CASE STUDY</h1>
                             <h2 className='text-5xl space-x-3 font-poppins'>
-                                <span className='text-pink-500'>#</span>4 Language Learning Website<br />and App for Students
+                                <span className=''></span>ZUKO<br />IS THE LIFE
                             </h2>
-                            <p className='w-1/2 font-poppins text-lg'>Online language learning games, videos, songs, books, worksheets and flashcards for students.!</p>
-                            <button className="bg-pink-600 px-3 py-2 rounded-md">Know More</button>
                         </div>
                     </div>
                 </div>
@@ -38,11 +38,10 @@ const Banner = () => {
                 <div className="flex text-left w-full items-center bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] absolute left-0 top-0 h-full">
                     <div className='lg:px-36'>
                         <div className='text-white ml-2 space-y-5 w-full p-4 '>
+                        <h1 className='text-2xl'>CASE STUDY</h1>
                             <h2 className='text-5xl space-x-3 font-poppins'>
-                                <span className='text-pink-500'>#</span>4 Language Learning Website<br />and App for Kids
+                                <span className=''></span>MAGIC TIME<br />TO BE<br/>YOURSELF
                             </h2>
-                            <p className='w-1/2  font-poppins text-lg'>Online language learning games, videos, songs, books, worksheets and flashcards for children.!</p>
-                            <button className="bg-pink-600 px-3 py-2 rounded-md">Know More</button>
                         </div>
                     </div>
                 </div>
@@ -52,11 +51,10 @@ const Banner = () => {
                 <div className="flex text-left w-full items-center bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)] absolute left-0 top-0 h-full">
                     <div className='lg:px-36'>
                         <div className='text-white ml-2 space-y-5 w-full p-4 '>
+                        <h1 className='text-2xl'>CASE STUDY</h1>
                             <h2 className='text-5xl space-x-3 font-poppins'>
-                                <span className='text-pink-500'>#</span>4 Language Learning Website<br />and App for Students
+                                <span className=''></span>PERFECT<br />MOOD<br/>IS ALWAYS<br/>HERE
                             </h2>
-                            <p className='w-1/2 font-poppins text-lg'>Teachers love Dinolingo reporting tools !!</p>
-                            <button className="bg-pink-600 px-3 py-2 rounded-md">Know More</button>
                         </div>
                     </div>
                 </div>

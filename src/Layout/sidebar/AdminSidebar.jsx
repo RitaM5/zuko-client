@@ -108,26 +108,25 @@ const AdminSidebar = () => {
         <div className="flex flex-col  h-full">
           <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 text-lg space-y-5 mt-2 font-medium overflow-x-hidden scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-100   md:h-[68%] h-[70%]">
             <li>
-              <NavLink to={"/dashboard/photographerhome"} className=" inline-flex items-center gap-2">
+              <NavLink to={"/dashboard/adminhome"} className=" inline-flex items-center gap-2">
                 <AiOutlineAppstore size={23} className="min-w-max" />
-                Photographer home
+                Admin home
               </NavLink>
             </li>
             <li>
-              <NavLink to={"/dashboard/addphoto"} className=" inline-flex items-center gap-2">
+              <NavLink to={"/dashboard/manageusers"} className=" inline-flex items-center gap-2">
                 <BsPerson size={23} className="min-w-max" />
-                Add photo
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to={"/dashboard/mygallery"} className="items-center inline-flex gap-2">
-                <HiOutlineDatabase size={23} className="min-w-max" />
-                My Gallery
+                Manage Users
               </NavLink>
             </li>
 
             {(open || isTabletMid) && (
               <div className="border-y py-5 border-slate-300 ">
+                 <p className="pl-3 my-2">
+                  <NavLink to={"/"} className="items-center inline-flex gap-2">
+                    Home
+                  </NavLink>
+                </p>
                 <small className="pl-3 text-lg inline-block mb-2">
                   Product categories
                 </small>

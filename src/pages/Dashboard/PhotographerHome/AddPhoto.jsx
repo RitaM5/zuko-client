@@ -24,17 +24,17 @@ const AddPhoto = () => {
                 if (imgResponse.success) {
                     const imgURL = imgResponse.data.display_url;
                     const { photographerName, photographerEmail, details, price, } = data;
-                    const newItem = { photographerName, photographerEmail, details, price: parseFloat(price), status: "pending", feedback: "", bought: 0, image: imgURL }
+                    const newItem = { photographerName, photographerEmail, details, price: parseFloat(price), status: "true", bought: 0, image: imgURL }
                     console.log(newItem)
                     axiosSecure.post('/galleries', newItem)
                         .then(data => {
-                            console.log('after posting new class', data.data)
+                           // console.log('after posting new class', data.data)
                             if (data.data.insertedId) {
                                 reset();
                                 Swal.fire({
                                     position: 'top-end',
                                     icon: 'success',
-                                    title: 'Class added successfully',
+                                    title: 'Photo added successfully',
                                     showConfirmButton: false,
                                     timer: 1500
                                 })
@@ -56,8 +56,8 @@ const AddPhoto = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Photographer Name</span>
                         </label>
-                        <input type="text" placeholder="class name"
-                            {...register("className", { required: true, maxLength: 120 })}
+                        <input type="text" placeholder="photographer name"
+                            {...register("photographerName", { required: true, maxLength: 120 })}
                             className="input input-bordered w-full " />
                     </div>
                     <div className="form-control w-full my-4">
@@ -71,8 +71,8 @@ const AddPhoto = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Photographer Email</span>
                             </label>
-                            <input type="email" placeholder="instructor email"
-                                {...register("instructorEmail", { required: true, maxLength: 120 })}
+                            <input type="email" placeholder="photographer email"
+                                {...register("photographerEmail", { required: true, maxLength: 120 })}
                                 className="input input-bordered w-full " />
                         </div>
                     </div>

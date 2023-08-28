@@ -167,6 +167,7 @@ const PhotographerSidebar = () => {
                     onClick={() => {
                         setOpen(!open);
                     }}
+                    
                     animate={
                         open
                             ? {
