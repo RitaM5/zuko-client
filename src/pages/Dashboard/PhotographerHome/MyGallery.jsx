@@ -64,8 +64,8 @@ const MyGallery = () => {
             <Helmet>
                 <title>Zuko | My Gallery</title>
             </Helmet>
-            <h3 className="text-2xl font-poppins text-center text-teal-800 underline underline-offset-8 font-semibold py-4">My Gallery</h3>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full py-4'>
+            <h3 className="text-2xl font-poppins text-center text-teal-800 underline underline-offset-8 font-semibold mt-7">My Gallery</h3>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full my-8'>
                 {
                     photographerPhoto.map(item => <>
                         <div key={item?._id} className="font-poppins card w-full bg-base-100 shadow-xl">

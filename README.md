@@ -1,8 +1,26 @@
-# React + Vite
+# Zuko
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Site Link: [https://zuko-client.web.app/](https://zuko-client.web.app/)
+---
+# admin email: admin@gmail.com, password: Jinia@123$
 
-Currently, two official plugins are available:
+### Project Overview
+1. It's a Photographer site. 
+3. This site has separate admin pannel for photographer, photographer and admin, which contain different information. And there is Authentication system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### List of technology used in my project
+1. React
+2. React Router
+3. Tailwind 
+4. Tanstack-Query, Axios
+5. React Icon, Icon8
+6. sweetalert2
+7. React-hook-form
+8. @headlessui/react
+9. React-helmet-async
+10. React-responsive-carousel
+11. Framer motion & AOS Animation
+12. JWT token
+13. Firebase Authentication
+14. Express.js & Mongodb

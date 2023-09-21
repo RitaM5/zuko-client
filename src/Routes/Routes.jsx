@@ -78,10 +78,10 @@ export const router = createBrowserRouter([
             //     element: <PaymentHistory></PaymentHistory>
             // },
             //admin routes
-            {
-                path: 'adminhome',
-                element: <AdminHome></AdminHome>
-            },
+            // {
+            //     path: 'adminhome',
+            //     element: <AdminHome></AdminHome>
+            // },
             {
                 path: 'manageusers',
                 element: <ManageUsers></ManageUsers>

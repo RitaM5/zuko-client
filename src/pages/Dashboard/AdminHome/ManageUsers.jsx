@@ -59,8 +59,8 @@ const ManageUsers = () => {
             <Helmet>
                 <title>Zuko | Manage users</title>
             </Helmet>
-            <p className='text-center  py-6 text-teal-800 text-2xl font-poppins font-semibold'>Manage Users</p>
-            <div className="overflow-x-auto bg-base-100 shadow-lg mt-4">
+            <p className='text-center mt-7 text-teal-800 text-2xl font-poppins font-semibold'>Manage Users</p>
+            <div className="overflow-x-auto bg-base-100 shadow-lg my-8">
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>

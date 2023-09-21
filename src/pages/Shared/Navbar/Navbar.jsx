@@ -60,8 +60,8 @@ const Navbar = () => {
               </>
             } */}
             {user && <>
-              {isAdmin && <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
-              {isPhotographer && <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              {isAdmin && <li><Link to="/dashboard/manageusers" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              {isPhotographer && <li><Link to="/dashboard/addphoto" className="py-3 px-3 inline-block">Dashboard</Link></li>}
 
             </>}
             <li>
@@ -116,8 +116,8 @@ const Navbar = () => {
               </>
             } */}
             {user && <>
-              {isAdmin && <li><Link to="/dashboard/adminhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
-              {isPhotographer && <li><Link to="/dashboard/photographerhome" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              {isAdmin && <li><Link to="/dashboard/manageusers" className="py-3 px-3 inline-block">Dashboard</Link></li>}
+              {isPhotographer && <li><Link to="/dashboard/addphoto" className="py-3 px-3 inline-block">Dashboard</Link></li>}
 
             </>}
             <div className="py-3">

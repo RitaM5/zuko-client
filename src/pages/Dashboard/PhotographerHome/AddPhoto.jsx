@@ -49,8 +49,8 @@ const AddPhoto = () => {
             <Helmet>
                 Zuko | Add New Photo
             </Helmet>
-            <p className='text-center  py-4 text-teal-800 text-2xl font-poppins font-semibold'>Add New Photo</p>
-            <div className='w-full px-2'>
+            <p className='text-center mt-7 text-teal-800 text-2xl font-poppins font-semibold'>Add New Photo</p>
+            <div className='w-full px-2 my-8'>
                 <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-1/2 md:mx-auto px-4 py-10 rounded-lg bg-base-200'>
                     <div className="form-control w-full mb-4">
                         <label className="label">

@@ -21,8 +21,8 @@ const Dashboard = () => {
             </Helmet>
             {/* <Navbar></Navbar> */}
 
-            <div className='lg:flex'>
-                <div className='w-full lg:w-1/4'>
+            <div className='lg:flex lg:gap-6'>
+                <div className='w-full lg:w-[16rem] lg:min-h-screen lg:bg-teal-800'>
                     {
                         isAdmin ? <AdminSidebar></AdminSidebar>
 
